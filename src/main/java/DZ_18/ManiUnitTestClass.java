@@ -20,7 +20,7 @@ public class ManiUnitTestClass {
         int numRows;
         int numCols;
 
-        if (array.length > 0 && array[0].length > 0) {
+        if (array.length > 1 && array[0].length > 1) {
             numRows = array.length;
             numCols = array[0].length;
 

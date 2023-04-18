@@ -14,7 +14,7 @@ public class ManiUnitTestClassTest {
     }
 
     @Test
-    public void arithmethicMeanDeafault() {
+    public void arithmethicMeanDefaultArray() {
         int[] array = {5, 8, 9, 2, 6};
         mainTest.arithmethicMean(array);
 
@@ -22,7 +22,7 @@ public class ManiUnitTestClassTest {
     }
 
     @Test
-    public void arithmethicMeanZero() {
+    public void arithmethicMeanEmptyArray() {
         int[] array = {};
         mainTest.arithmethicMean(array);
 
@@ -54,8 +54,16 @@ public class ManiUnitTestClassTest {
     }
 
     @Test
-    public void isMatrixSquareZero() {
+    public void isMatrixSquareEmptyArray() {
         int[][] array = {};
+        mainTest.isMatrixSquare(array);
+
+        Assert.assertFalse(mainTest.isMatrixSquare(array));
+    }
+
+    @Test
+    public void isMatrixSquareArrayOneOne() {
+        int[][] array = new int[1][1];
         mainTest.isMatrixSquare(array);
 
         Assert.assertFalse(mainTest.isMatrixSquare(array));
